@@ -12,8 +12,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @Component
 @NoArgsConstructor
 public class Bot extends TelegramLongPollingBot {
-    private static final String BOT_USERNAME = "MathBotTest";
-    private static final String BOT_TOKEN = "1969241175:AAFnK9M2RlA7Et6mSA7BTt7h3Kt_4mDPYRk";
+    private static final String BOT_USERNAME = "K-28 mathematician";
+    private static final String BOT_TOKEN = "1713656835:AAFDYpIUJnDUrqUMji2mBPJJtmJxv_SUKl4";
 
     @Setter(onMethod=@__({@Autowired}))
     private CommandSelectorService commands;
