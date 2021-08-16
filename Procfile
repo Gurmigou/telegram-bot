@@ -1,0 +1,1 @@
+worker: java -cp target/classes/:target/dependency/* com.yehorbukh.mathbotv2.MathBotV2Application.java
