@@ -30,12 +30,6 @@ public class StatsCommands {
         }
     }
 
-    private Optional<UserStats> findStats(long chatId, long userId) {
-        var user = new BotUser();
-        user.setUserId(userId);
-        return statsRepo.findUserStatsByChatIdAndUser(chatId, user);
-    }
-
     public void wordStats(Bot bot, long chatId) {
         List<Object[]> wordsTop = statsRepo.wordsTop();
         String stats = StatsMessage.createStatsMessage("Рейтинг по словам", "words", wordsTop);
