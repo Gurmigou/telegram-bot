@@ -31,38 +31,38 @@ public class StatsCommands {
     }
 
     public void wordStats(Bot bot, long chatId) {
-        List<Object[]> wordsTop = statsRepo.wordsTop();
+        List<Object[]> wordsTop = statsRepo.wordsTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг по словам", "words", wordsTop);
         executeCommand(bot, chatId, stats);
     }
 
     public void stickerStats(Bot bot, long chatId) {
-        List<Object[]> stickersTop = statsRepo.stickerTop();
+        List<Object[]> stickersTop = statsRepo.stickerTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг по стикерам", "stickers", stickersTop);
         executeCommand(bot, chatId, stats);
     }
 
     public void swearWordStats(Bot bot, long chatId) {
-        List<Object[]> swearWordsTop = statsRepo.swearWordsTop();
+        List<Object[]> swearWordsTop = statsRepo.swearWordsTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг самых матюкливых", "swear words", swearWordsTop);
         executeCommand(bot, chatId, stats);
     }
 
     public void gifStats(Bot bot, long chatId) {
-        List<Object[]> gifsTop = statsRepo.gifsTop();
+        List<Object[]> gifsTop = statsRepo.gifsTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг по гифкам", "gifs", gifsTop);
         executeCommand(bot, chatId, stats);
     }
 
     public void videoNoteStats(Bot bot, long chatId) {
-        List<Object[]> videoNotesTop = statsRepo.videoNotesTop();
+        List<Object[]> videoNotesTop = statsRepo.videoNotesTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг по видеообращениям", "video notes", videoNotesTop);
         executeCommand(bot, chatId, stats);
 
     }
 
     public void voiceStats(Bot bot, long chatId) {
-        List<Object[]> voicesTop = statsRepo.voicesTop();
+        List<Object[]> voicesTop = statsRepo.voicesTop(chatId);
         String stats = StatsMessage.createStatsMessage("Рейтинг по голосовым", "voices", voicesTop);
         executeCommand(bot, chatId, stats);
     }
