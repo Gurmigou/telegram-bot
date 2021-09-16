@@ -12,8 +12,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 @Component
 @NoArgsConstructor
 public class Bot extends TelegramLongPollingBot {
-    private static final String BOT_USERNAME = "K-28 mathematician";
-    private static final String BOT_TOKEN = "1713656835:AAFDYpIUJnDUrqUMji2mBPJJtmJxv_SUKl4";
+    private static final String BOT_USERNAME = "NAME";
+    private static final String BOT_TOKEN = "TOKEN";
 
     @Setter(onMethod=@__({@Autowired}))
     private CommandSelectorService commands;
@@ -53,10 +53,6 @@ public class Bot extends TelegramLongPollingBot {
                                    update.getMessage().getChat().getId(),
                                    update.getMessage().getFrom().getId(),
                                    update.getMessage().getFrom().getFirstName());
-
-//        else if (isTag(update)) {
-//
-//        }
 
         else if (isJustMessage(update))
             statsCounter.processMessage(update.getMessage().getChat().getId(),
